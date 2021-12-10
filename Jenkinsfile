@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'dotnetBuild eShopOnWeb.sln'
-        dotnetBuild(sdk: 'dotnetsdk')
+        withDotNet(sdk: 'dotnetsdk')
       }
     }
 
